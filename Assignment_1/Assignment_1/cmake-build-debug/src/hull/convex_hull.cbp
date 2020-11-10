@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="convex_hull"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\hull\;CMake Files\src\inside\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="convex_hull">
+				<Option output="/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/convex_hull" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 convex_hull"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="convex_hull/fast">
+				<Option output="/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/convex_hull" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 convex_hull/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/src/hull/main.cpp">
+			<Option target="convex_hull"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/src/hull/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\hull\"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/src/inside/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\inside\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,8 @@
+/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/CMakeFiles/rebuild_cache.dir
+/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/CMakeFiles/edit_cache.dir
+/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/hull/CMakeFiles/convex_hull.dir
+/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/inside/CMakeFiles/rebuild_cache.dir
+/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/inside/CMakeFiles/edit_cache.dir
+/Users/yucong/Documents/study/computer_graphics/Assignment_1/Assignment_1/cmake-build-debug/src/inside/CMakeFiles/point_in_polygon.dir
