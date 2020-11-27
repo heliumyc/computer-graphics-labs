@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5
+CMAKE_SOURCE_DIR = /Users/yucong/Documents/study/computer_graphics/labs/Assignment_4/Assignment_4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/yucong/Documents/study/computer_graphics/labs/Assignment_4/Assignment_4/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug/CMakeFiles /Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yucong/Documents/study/computer_graphics/labs/Assignment_4/Assignment_4/cmake-build-debug/CMakeFiles /Users/yucong/Documents/study/computer_graphics/labs/Assignment_4/Assignment_4/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yucong/Documents/study/computer_graphics/labs/Assignment_4/Assignment_4/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named assignment5
+# Target rules for targets named assignment4
 
 # Build rule for target.
-assignment5: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment5
-.PHONY : assignment5
+assignment4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment4
+.PHONY : assignment4
 
 # fast build rule for target.
-assignment5/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/build
-.PHONY : assignment5/fast
+assignment4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4.dir/build.make CMakeFiles/assignment4.dir/build
+.PHONY : assignment4/fast
 
 src/main.o: src/main.cpp.o
 
@@ -149,7 +149,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4.dir/build.make CMakeFiles/assignment4.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -158,7 +158,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4.dir/build.make CMakeFiles/assignment4.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -167,35 +167,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment4.dir/build.make CMakeFiles/assignment4.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/raster.o: src/raster.cpp.o
-
-.PHONY : src/raster.o
-
-# target to build an object file
-src/raster.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/raster.cpp.o
-.PHONY : src/raster.cpp.o
-
-src/raster.i: src/raster.cpp.i
-
-.PHONY : src/raster.i
-
-# target to preprocess a source file
-src/raster.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/raster.cpp.i
-.PHONY : src/raster.cpp.i
-
-src/raster.s: src/raster.cpp.s
-
-.PHONY : src/raster.s
-
-# target to generate assembly for a file
-src/raster.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/raster.cpp.s
-.PHONY : src/raster.cpp.s
 
 # Help Target
 help:
@@ -205,13 +178,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... assignment5"
+	@echo "... assignment4"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/raster.o"
-	@echo "... src/raster.i"
-	@echo "... src/raster.s"
 .PHONY : help
 
 

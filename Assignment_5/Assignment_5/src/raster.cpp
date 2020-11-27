@@ -42,10 +42,12 @@ void rasterize_triangle(const Program& program, const UniformAttributes& uniform
 				// The pixel center is offset by 0.5, 0.5
 				Eigen::Vector3f pixel(i+0.5,j+0.5,1);
 				Eigen::Vector3f b = Ai*pixel;
+				// render only if center point is inside triangle
 				if (b.minCoeff() >= 0)
 				{
 					VertexAttributes va = VertexAttributes::interpolate(v1,v2,v3,b[0],b[1],b[2]);
 					// Only render fragments within the bi-unit cube
+					// a way of saving computation
 					if (va.position[2] >= -1 && va.position[2] <= 1)
 					{ 
 						FragmentAttributes frag = program.FragmentShader(va,uniform);

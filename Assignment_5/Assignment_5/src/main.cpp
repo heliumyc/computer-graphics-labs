@@ -21,7 +21,7 @@ int main()
 	// Global Constants (empty in this example)
 	UniformAttributes uniform;
 
-	// Basic rasterisation program
+	// Basic rasterization program
 	Program program;
 
 	// The vertex shader is the identity

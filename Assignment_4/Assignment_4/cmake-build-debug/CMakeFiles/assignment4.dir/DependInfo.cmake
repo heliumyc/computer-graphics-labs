@@ -4,14 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/main.cpp" "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug/CMakeFiles/assignment5.dir/src/main.cpp.o"
-  "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/raster.cpp" "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug/CMakeFiles/assignment5.dir/src/raster.cpp.o"
+  "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_4/Assignment_4/src/main.cpp" "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_4/Assignment_4/cmake-build-debug/CMakeFiles/assignment4.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "DATA_DIR=\"/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/data/\""
+  "DATA_DIR=\"/Users/yucong/Documents/study/computer_graphics/labs/Assignment_4/Assignment_4/data/\""
   )
 
 # The include file search paths:

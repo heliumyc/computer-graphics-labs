@@ -1,3 +1,5 @@
 Assignment_5/build/*
 Assignment_5/buildRelease/*
+Assignment_5/cmake-build*/*
 .vscode/*
+
