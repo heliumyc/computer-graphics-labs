@@ -42,9 +42,9 @@ int main() {
 
     // One triangle in the center of the screen
     vector<VertexAttributes> vertices;
-    vertices.push_back(VertexAttributes(-1, -1, 0));
-    vertices.push_back(VertexAttributes(1, -1, 0));
-    vertices.push_back(VertexAttributes(0, 1, 0));
+    vertices.emplace_back(-1, -1, 0);
+    vertices.emplace_back(1, -1, 0);
+    vertices.emplace_back(0, 1, 0);
 
     rasterize_triangles(program, uniform, vertices, frameBuffer);
 
