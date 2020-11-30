@@ -1,136 +1,10 @@
-#include <utility>
-#include <Eigen/Dense>
-#include <Eigen/Geometry>
-#include <stack>
-#include "myutility.h"
-
 //
-// Created by CONG YU on 2020/11/27.
+// Created by CONG YU on 2020/11/29.
 //
 
-#ifndef ASSIGNMENT5_DATA_TYPES_H
-#define ASSIGNMENT5_DATA_TYPES_H
-
-using namespace Eigen;
-
-struct Ray {
-    Vector3d origin;
-    Vector3d direction;
-    Ray() = default;
-    Ray(Vector3d o, Vector3d d) : origin(std::move(o)), direction(std::move(d)) { }
-};
-
-struct Light {
-    Vector3d position;
-    Vector3d intensity;
-};
-
-struct Intersection {
-    Vector3d position;
-    Vector3d normal;
-    double ray_param{};
-};
-
-struct Camera {
-    bool is_perspective;
-    Vector3d position;
-    double field_of_view; // between 0 and PI
-    double focal_length;
-    double lens_radius; // for depth of field
-};
-
-struct Material {
-    Vector3d ambient_color;
-    Vector3d diffuse_color;
-    Vector3d specular_color;
-    double specular_exponent{}; // Also called "shininess"
-
-    Vector3d reflection_color;
-    Vector3d refraction_color;
-    double refraction_index{};
-};
-
-struct Object {
-    Material material;
-    virtual ~Object() = default; // Classes with virtual methods should have a virtual destructor!
-    virtual bool intersect(const Ray &ray, Intersection &hit) = 0;
-};
-
-// We use smart pointers to hold objects as this is a virtual class
-typedef std::shared_ptr<Object> ObjectPtr;
-
-struct Sphere : public Object {
-    Vector3d position;
-    double radius;
-
-    ~Sphere() override = default;
-    bool intersect(const Ray &ray, Intersection &hit) override;
-};
-
-struct Parallelogram : public Object {
-    Vector3d origin;
-    Vector3d u;
-    Vector3d v;
-
-    ~Parallelogram() override = default;
-    bool intersect(const Ray &ray, Intersection &hit) override;
-};
-
-struct AABBTree {
-    struct Node {
-        AlignedBox3d bbox;
-        int parent; // Index of the parent node (-1 for root)
-        int left; // Index of the left child (-1 for a leaf)
-        int right; // Index of the right child (-1 for a leaf)
-        int triangle; // Index of the node triangle (-1 for internal nodes)
-
-        Node(const Node& node) {
-            bbox = node.bbox;
-            parent = node.parent;
-            left = node.left;
-            right = node.right;
-            triangle = node.triangle;
-        }
-
-        Node() {
-            left = -1;
-            right = -1;
-            triangle = -1;
-            parent = -1;
-        }
-    };
-
-    std::vector<Node> nodes;
-    int root{};
-
-    AABBTree() = default; // Default empty constructor
-    AABBTree(const MatrixXd &V, const MatrixXi &F); // Build a BVH from an existing mesh
-private:
-    int buildTree(int cur, int parent, const MatrixXd &V, const MatrixXi &F, const MatrixXd &centroids, std::vector<int> &triangleIdx, int start,
-                  int end, int axis);
-};
-
-struct Mesh : public Object {
-    MatrixXd vertices; // n x 3 matrix (n points)
-    MatrixXi facets; // m x 3 matrix (m triangles)
-
-    AABBTree bvh;
-
-    Mesh() = default; // Default empty constructor
-    explicit Mesh(const std::string &filename);
-    ~Mesh() override = default;
-    bool intersect(const Ray &ray, Intersection &hit) override;
-};
-
-struct Scene {
-    Vector3d background_color;
-    Vector3d ambient_light;
-
-    Camera camera;
-    std::vector<Material> materials;
-    std::vector<Light> lights;
-    std::vector<ObjectPtr> objects;
-};
+#include <vector>
+#include <fstream>
+#include "data_types.h"
 
 ////////////////
 // utility
@@ -209,6 +83,54 @@ bool intersect_triangle(const Ray &ray, const Vector3d &vertex0, const Vector3d 
     } else {
         return false;
     } // This means that there is a line intersection but not a ray intersection.
+}
+
+inline double sqr(double x) {
+    return x * x;
+}
+
+void inline get_triangle(const MatrixXd &V, const MatrixXi &F, int idx, Vector3d &A, Vector3d &B, Vector3d &C) {
+    auto row = F.row(idx);
+    A = V.row(row.x());
+    B = V.row(row.y());
+    C = V.row(row.z());
+}
+
+void load_off(const std::string &filename, MatrixXd &V, MatrixXi &F) {
+    std::ifstream in(filename);
+    std::string token;
+    in >> token;
+    int nv, nf, ne;
+    in >> nv >> nf >> ne;
+    V.resize(nv, 3);
+    F.resize(nf, 3);
+    for (int i = 0; i < nv; ++i) {
+        in >> V(i, 0) >> V(i, 1) >> V(i, 2);
+    }
+    for (int i = 0; i < nf; ++i) {
+        int s;
+        in >> s >> F(i, 0) >> F(i, 1) >> F(i, 2);
+        assert(s == 3);
+    }
+}
+
+// Bounding box of a triangle
+AlignedBox3d bbox_triangle(const Vector3d &a, const Vector3d &b, const Vector3d &c) {
+    AlignedBox3d box;
+    box.extend(a);
+    box.extend(b);
+    box.extend(c);
+    return box;
+}
+
+// -1 means non exist
+double inline solve_quadratic_equation(double a, double b, double c) {
+    double delta = sqr(b) - 4 * a * c;
+    if (delta < 0) {
+        return -1;
+    } else {
+        return (-b - sqrt(delta)) / (2 * a);
+    }
 }
 
 ///////////////////
@@ -384,5 +306,3 @@ bool Mesh::intersect(const Ray &ray, Intersection &closest_hit) {
 
     return false;
 }
-
-#endif //ASSIGNMENT5_DATA_TYPES_H

@@ -143,6 +143,60 @@ assignment5/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/build
 .PHONY : assignment5/fast
 
+src/attributes.o: src/attributes.cpp.o
+
+.PHONY : src/attributes.o
+
+# target to build an object file
+src/attributes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/attributes.cpp.o
+.PHONY : src/attributes.cpp.o
+
+src/attributes.i: src/attributes.cpp.i
+
+.PHONY : src/attributes.i
+
+# target to preprocess a source file
+src/attributes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/attributes.cpp.i
+.PHONY : src/attributes.cpp.i
+
+src/attributes.s: src/attributes.cpp.s
+
+.PHONY : src/attributes.s
+
+# target to generate assembly for a file
+src/attributes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/attributes.cpp.s
+.PHONY : src/attributes.cpp.s
+
+src/data_types.o: src/data_types.cpp.o
+
+.PHONY : src/data_types.o
+
+# target to build an object file
+src/data_types.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/data_types.cpp.o
+.PHONY : src/data_types.cpp.o
+
+src/data_types.i: src/data_types.cpp.i
+
+.PHONY : src/data_types.i
+
+# target to preprocess a source file
+src/data_types.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/data_types.cpp.i
+.PHONY : src/data_types.cpp.i
+
+src/data_types.s: src/data_types.cpp.s
+
+.PHONY : src/data_types.s
+
+# target to generate assembly for a file
+src/data_types.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment5.dir/build.make CMakeFiles/assignment5.dir/src/data_types.cpp.s
+.PHONY : src/data_types.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -206,6 +260,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... assignment5"
+	@echo "... src/attributes.o"
+	@echo "... src/attributes.i"
+	@echo "... src/attributes.s"
+	@echo "... src/data_types.o"
+	@echo "... src/data_types.i"
+	@echo "... src/data_types.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

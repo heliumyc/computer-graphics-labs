@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/attributes.cpp" "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug/CMakeFiles/assignment5.dir/src/attributes.cpp.o"
+  "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/data_types.cpp" "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug/CMakeFiles/assignment5.dir/src/data_types.cpp.o"
   "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/main.cpp" "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug/CMakeFiles/assignment5.dir/src/main.cpp.o"
   "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/raster.cpp" "/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/cmake-build-debug/CMakeFiles/assignment5.dir/src/raster.cpp.o"
   )

@@ -1,13 +1,19 @@
 #pragma once
 
 #include <Eigen/Core>
+#include <vector>
+#include "data_types.h"
 
 class VertexAttributes
 {
 	public:
-	VertexAttributes(float x = 0, float y = 0, float z = 0, float w = 1)
+	explicit VertexAttributes(float x = 0, float y = 0, float z = 0, float w = 1)
 	{
 		position << x,y,z,w;
+	}
+
+	explicit VertexAttributes(Eigen::Vector3d vertex) {
+	    position << vertex.x() , vertex.y() , vertex.z() , 1;
 	}
 
     // Interpolates the vertex attributes
@@ -25,7 +31,9 @@ class VertexAttributes
         return r;
     }
 
-	Eigen::Vector4f position;
+    friend std::ostream& operator<<(std::ostream& os, const VertexAttributes &v);
+
+    Eigen::Vector4f position;
 };
 
 class FragmentAttributes
@@ -53,4 +61,6 @@ class FrameBufferAttributes
 class UniformAttributes
 {
 	public:
+    Camera camera;
+    std::vector<Light> lights;
 };

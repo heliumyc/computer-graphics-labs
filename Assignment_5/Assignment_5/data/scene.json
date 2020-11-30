@@ -58,37 +58,7 @@
 		{
 			"Type": "Mesh",
 			"Material": 0,
-			"Path": "dodeca.off"
-		},
-		{
-			"Type": "Sphere",
-			"Material": 0,
-			"Position": [5, 0, 0],
-			"Radius": 1
-		},
-		{
-			"Type": "Sphere",
-			"Material": 0,
-			"Position": [4, 0.1, 1],
-			"Radius": 0.5
-		},
-		{
-			"Type": "Sphere",
-			"Material": 0,
-			"Position": [-2, 0.4, 1],
-			"Radius": 0.5
-		},
-		{
-			"Type": "Sphere",
-			"Material": 0,
-			"Position": [-5, 0.8, -1],
-			"Radius": 0.5
-		},
-		{
-			"Type": "Sphere",
-			"Material": 0,
-			"Position": [-8, 1.6, 1],
-			"Radius": 0.5
+			"Path": "test.off"
 		}
 	]
 }

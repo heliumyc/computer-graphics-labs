@@ -90,6 +90,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/attributes.cpp">
+			<Option target="assignment5"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/attributes.h">
+			<Option target="assignment5"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/data_types.cpp">
+			<Option target="assignment5"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/data_types.h">
+			<Option target="assignment5"/>
+		</Unit>
 		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_5/Assignment_5/src/main.cpp">
 			<Option target="assignment5"/>
 		</Unit>

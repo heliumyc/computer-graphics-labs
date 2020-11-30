@@ -6,7 +6,8 @@ add_executable("assignment5"
 	src/main.cpp
 	src/raster.h
 	src/raster.cpp
-)
+	src/attributes.cpp
+		src/data_types.cpp)
 
 # Include Eigen for linear algebra
 target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../ext/eigen" "${CMAKE_CURRENT_SOURCE_DIR}/../ext/stb" "${CMAKE_CURRENT_SOURCE_DIR}/../ext/gif-h" "${CMAKE_CURRENT_SOURCE_DIR}/../ext/json")
