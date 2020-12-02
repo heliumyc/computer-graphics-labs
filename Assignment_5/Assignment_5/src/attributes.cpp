@@ -11,6 +11,10 @@ std::ostream& operator<<(std::ostream& os, const VertexAttributes &v)
             << v.position[1] << ", "
             << v.position[2] << ", "
             << v.position[3] << ")"
+            << " normal: " << "("
+            << v.normal.x() << ", "
+            << v.normal.y() << ", "
+            << v.normal.z() << ")"
             << std::endl;
     return os;
 }

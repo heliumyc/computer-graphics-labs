@@ -47,9 +47,9 @@ void rasterize_triangle(const Program& program, const UniformAttributes& uniform
 				{
 					VertexAttributes va = VertexAttributes::interpolate(v1,v2,v3,b[0],b[1],b[2]);
 					// Only render fragments within the bi-unit cube
-					// a way of saving computation
+					// a way of saving computation, (-1,1) for z-index
 					if (va.position[2] >= -1 && va.position[2] <= 1)
-					{ 
+					{
 						FragmentAttributes frag = program.FragmentShader(va,uniform);
 						frameBuffer(i,j) = program.BlendingShader(frag,frameBuffer(i,j));
 					}

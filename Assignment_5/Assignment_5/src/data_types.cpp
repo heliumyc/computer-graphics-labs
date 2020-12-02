@@ -11,26 +11,26 @@
 ///////////////
 // Reference: https://gamedev.stackexchange.com/questions/18436/most-efficient-aabb-vs-ray-collision-algorithms
 // the ray.direction has been inversed for performance
-bool intersect_box(const Ray &inv_ray, const AlignedBox3d &box) {
+bool intersect_box(const Ray &inv_ray, const AlignedBox3f &box) {
     // Compute whether the ray intersects the given box.
     // There is no need to set the resulting normal and ray parameter, since
     // we are not testing with the real surface here anyway.
-    Vector3d left_bottom =  box.corner(AlignedBox3d::CornerType::BottomLeftFloor);
-    Vector3d right_top = box.corner(AlignedBox3d::CornerType::TopRightCeil);
-    double tx1 = (left_bottom.x() - inv_ray.origin.x()) * inv_ray.direction.x();
-    double tx2 = (right_top.x() - inv_ray.origin.x()) * inv_ray.direction.x();
+    Vector3f left_bottom =  box.corner(AlignedBox3f::CornerType::BottomLeftFloor);
+    Vector3f right_top = box.corner(AlignedBox3f::CornerType::TopRightCeil);
+    float tx1 = (left_bottom.x() - inv_ray.origin.x()) * inv_ray.direction.x();
+    float tx2 = (right_top.x() - inv_ray.origin.x()) * inv_ray.direction.x();
 
-    double tmin = std::min(tx1, tx2);
-    double tmax = std::max(tx1, tx2);
+    float tmin = std::min(tx1, tx2);
+    float tmax = std::max(tx1, tx2);
 
-    double ty1 = (left_bottom.y() - inv_ray.origin.y()) * inv_ray.direction.y();
-    double ty2 = (right_top.y() - inv_ray.origin.y()) * inv_ray.direction.y();
+    float ty1 = (left_bottom.y() - inv_ray.origin.y()) * inv_ray.direction.y();
+    float ty2 = (right_top.y() - inv_ray.origin.y()) * inv_ray.direction.y();
 
     tmin = std::max(tmin, std::min(ty1, ty2));
     tmax = std::min(tmax, std::max(ty1, ty2));
 
-    double tz1 = (left_bottom.z() - inv_ray.origin.z()) * inv_ray.direction.z();
-    double tz2 = (right_top.z() - inv_ray.origin.z()) * inv_ray.direction.z();
+    float tz1 = (left_bottom.z() - inv_ray.origin.z()) * inv_ray.direction.z();
+    float tz2 = (right_top.z() - inv_ray.origin.z()) * inv_ray.direction.z();
 
     tmin = std::max(tmin, std::min(tz1, tz2));
     tmax = std::min(tmax, std::max(tz1, tz2));
@@ -45,14 +45,14 @@ bool intersect_box(const Ray &inv_ray, const AlignedBox3d &box) {
 
 // Reference:
 // https://en.wikipedia.org/wiki/M%C3%B6ller%E2%80%93Trumbore_intersection_algorithm
-bool intersect_triangle(const Ray &ray, const Vector3d &vertex0, const Vector3d &vertex1, const Vector3d &vertex2, Intersection &hit) {
+bool intersect_triangle(const Ray &ray, const Vector3f &vertex0, const Vector3f &vertex1, const Vector3f &vertex2, Intersection &hit) {
     /**
      * Möller–Trumbore intersection algorithm
      * from wikipedia !!!!!!!!!!
      */
-    const double EPSILON = 0.0000001;
-    Vector3d edge1, edge2, h, s, q;
-    double a, f, u, v;
+    const float EPSILON = 0.0000001;
+    Vector3f edge1, edge2, h, s, q;
+    float a, f, u, v;
     edge1 = vertex1 - vertex0;
     edge2 = vertex2 - vertex0;
     h = ray.direction.cross(edge2);
@@ -70,7 +70,7 @@ bool intersect_triangle(const Ray &ray, const Vector3d &vertex0, const Vector3d 
     if (v < 0.0 || u + v > 1.0)
         return false;
     // At this stage we can compute t to find out where the intersection point is on the line.
-    double t = f * edge2.dot(q);
+    float t = f * edge2.dot(q);
     if (t > EPSILON) // ray intersection
     {
         hit.position = ray.origin + t * ray.direction;
@@ -85,18 +85,18 @@ bool intersect_triangle(const Ray &ray, const Vector3d &vertex0, const Vector3d 
     } // This means that there is a line intersection but not a ray intersection.
 }
 
-inline double sqr(double x) {
+inline float sqr(float x) {
     return x * x;
 }
 
-void inline get_triangle(const MatrixXd &V, const MatrixXi &F, int idx, Vector3d &A, Vector3d &B, Vector3d &C) {
+void inline get_triangle(const MatrixXf &V, const MatrixXi &F, int idx, Vector3f &A, Vector3f &B, Vector3f &C) {
     auto row = F.row(idx);
     A = V.row(row.x());
     B = V.row(row.y());
     C = V.row(row.z());
 }
 
-void load_off(const std::string &filename, MatrixXd &V, MatrixXi &F) {
+void load_off(const std::string &filename, MatrixXf &V, MatrixXi &F) {
     std::ifstream in(filename);
     std::string token;
     in >> token;
@@ -115,8 +115,8 @@ void load_off(const std::string &filename, MatrixXd &V, MatrixXi &F) {
 }
 
 // Bounding box of a triangle
-AlignedBox3d bbox_triangle(const Vector3d &a, const Vector3d &b, const Vector3d &c) {
-    AlignedBox3d box;
+AlignedBox3f bbox_triangle(const Vector3f &a, const Vector3f &b, const Vector3f &c) {
+    AlignedBox3f box;
     box.extend(a);
     box.extend(b);
     box.extend(c);
@@ -124,8 +124,8 @@ AlignedBox3d bbox_triangle(const Vector3d &a, const Vector3d &b, const Vector3d 
 }
 
 // -1 means non exist
-double inline solve_quadratic_equation(double a, double b, double c) {
-    double delta = sqr(b) - 4 * a * c;
+float inline solve_quadratic_equation(float a, float b, float c) {
+    float delta = sqr(b) - 4 * a * c;
     if (delta < 0) {
         return -1;
     } else {
@@ -143,7 +143,7 @@ Mesh::Mesh(const std::string &filename) {
     bvh = AABBTree(vertices, facets);
 }
 
-int AABBTree::buildTree(int cur, int parent, const MatrixXd &V, const MatrixXi &F, const MatrixXd &centroids, std::vector<int> &triangleIdx,
+int AABBTree::buildTree(int cur, int parent, const MatrixXf &V, const MatrixXi &F, const MatrixXf &centroids, std::vector<int> &triangleIdx,
                         int start, int end, int axis) {
     if (start > end) {
         // will never happen
@@ -158,7 +158,7 @@ int AABBTree::buildTree(int cur, int parent, const MatrixXd &V, const MatrixXi &
 
     if (start == end) {
         // leave
-        Vector3d A, B, C;
+        Vector3f A, B, C;
         nodes[cur].triangle = triangleIdx[start];
         nodes[cur].left = -1;
         nodes[cur].right = -1;
@@ -179,9 +179,9 @@ int AABBTree::buildTree(int cur, int parent, const MatrixXd &V, const MatrixXi &
     return cur;
 }
 
-AABBTree::AABBTree(const MatrixXd &V, const MatrixXi &F) {
+AABBTree::AABBTree(const MatrixXf &V, const MatrixXi &F) {
     // Compute the centroids of all the triangles in the input mesh
-    MatrixXd centroids(F.rows(), V.cols());
+    MatrixXf centroids(F.rows(), V.cols());
     centroids.setZero();
     for (int i = 0; i < F.rows(); ++i) {
         for (int k = 0; k < F.cols(); ++k) {
@@ -214,7 +214,7 @@ bool Sphere::intersect(const Ray &ray, Intersection &hit) {
     // If the ray hits the sphere, set the result of the intersection in the
     // struct 'hit'
     auto temp = ray.origin - position;
-    double t = solve_quadratic_equation(
+    float t = solve_quadratic_equation(
             ray.direction.dot(ray.direction),
             2 * temp.dot(ray.direction),
             temp.dot(temp) - sqr(radius)
@@ -230,8 +230,8 @@ bool Sphere::intersect(const Ray &ray, Intersection &hit) {
 }
 
 bool Parallelogram::intersect(const Ray &ray, Intersection &hit) {
-    Vector3d right_hand_side = this->origin - ray.origin;
-    Matrix3d A;
+    Vector3f right_hand_side = this->origin - ray.origin;
+    Matrix3f A;
 
     // initializing left hand side matrix and right hand side vector
     for (int i = 0; i < 3; ++i) {
@@ -244,7 +244,7 @@ bool Parallelogram::intersect(const Ray &ray, Intersection &hit) {
         return false;
     }
 
-    Vector3d intersection_coeffictions = A.colPivHouseholderQr().solve(right_hand_side);
+    Vector3f intersection_coeffictions = A.colPivHouseholderQr().solve(right_hand_side);
     if (intersection_coeffictions(0) > 0 && intersection_coeffictions(1) >= 0 && intersection_coeffictions(2) >= 0 &&
         intersection_coeffictions(1) <= 1 && intersection_coeffictions(2) <= 1)
     {
@@ -273,7 +273,7 @@ bool Mesh::intersect(const Ray &ray, Intersection &closest_hit) {
     while(!possible_nodes.empty()) {
         AABBTree::Node curr = possible_nodes.top();
         possible_nodes.pop();
-        Vector3d inverse_direction(1.0 / ray.direction[0], 1.0 / ray.direction[1], 1.0 / ray.direction[2]);
+        Vector3f inverse_direction(1.0 / ray.direction[0], 1.0 / ray.direction[1], 1.0 / ray.direction[2]);
         Ray inverse_ray(ray.origin, inverse_direction);
         if (intersect_box(inverse_ray, curr.bbox)) {
             if (curr.triangle != -1) {
