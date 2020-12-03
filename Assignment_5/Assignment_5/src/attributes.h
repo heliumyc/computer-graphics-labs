@@ -3,15 +3,19 @@
 #include <Eigen/Core>
 #include <vector>
 #include <iostream>
+#include <set>
 #include "data_types.h"
 
 class VertexAttributes {
 public:
+
     explicit VertexAttributes(float x = 0, float y = 0, float z = 0, float w = 1) {
         position << x, y, z, w;
+        position_in_eye << 0,0,0;
+        normal << 0,0,0;
     }
 
-    explicit VertexAttributes(Eigen::Vector3f vertex) {
+    explicit VertexAttributes(Eigen::Vector3f vertex) : VertexAttributes() {
         position << vertex.x(), vertex.y(), vertex.z(), 1;
     }
 
@@ -36,6 +40,9 @@ public:
     Eigen::Vector4f position;
     Eigen::Vector4f position_in_eye;
     Eigen::Vector3f normal;
+
+    // neighbor vertex in the same facet
+    std::set<int> facets_ids{};
 };
 
 class FragmentAttributes {
@@ -52,7 +59,7 @@ class FrameBufferAttributes {
 public:
     FrameBufferAttributes(uint8_t r = 0, uint8_t g = 0, uint8_t b = 0, uint8_t a = 255) {
         color << r, g, b, a;
-        depth = 2; // this value should be between -1 and 1, 2 is further than  the visible range
+        depth = -2; // this value should be between -1 and 1, 2 is further than  the visible range
     }
 
     Eigen::Matrix<uint8_t, 4, 1> color;
