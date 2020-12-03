@@ -472,13 +472,14 @@ int main(int argc, char *argv[]) {
     // Load scene from file
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " scene.json" << "[render option: 1|2|3|4]" << std::endl;
-        std::cerr << "    " << " 1 for wireframe, 2 for flat shading, 3 for per-vertex, 4 for gif production";
+        std::cerr << "    " << " 1 for wireframe, 2 for flat shading, 3 for per-vertex, 4 for gif production" << std::endl;
+        std::cerr << "like: ./assignment5 scene.json 4  to generate gif" << std::endl;
         return 1;
     }
     Scene scene = load_scene(argv[1]);
     int render_option = std::stoi(argv[2], nullptr, 10);
     if (render_option > 4 || render_option < 1) {
-        std::cerr << "invalid option" << std::endl;
+        std::cerr << "invalid option, must be from 1 to 4" << std::endl;
         return 1;
     }
 
