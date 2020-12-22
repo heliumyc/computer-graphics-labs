@@ -103,21 +103,66 @@ CMakeFiles/RasterViewer.dir/src/RasterViewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RasterViewer.dir/src/RasterViewer.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/RasterViewer.cpp -o CMakeFiles/RasterViewer.dir/src/RasterViewer.cpp.s
 
+CMakeFiles/RasterViewer.dir/src/Triangle.cpp.o: CMakeFiles/RasterViewer.dir/flags.make
+CMakeFiles/RasterViewer.dir/src/Triangle.cpp.o: ../src/Triangle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RasterViewer.dir/src/Triangle.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RasterViewer.dir/src/Triangle.cpp.o -c /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/Triangle.cpp
+
+CMakeFiles/RasterViewer.dir/src/Triangle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RasterViewer.dir/src/Triangle.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/Triangle.cpp > CMakeFiles/RasterViewer.dir/src/Triangle.cpp.i
+
+CMakeFiles/RasterViewer.dir/src/Triangle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RasterViewer.dir/src/Triangle.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/Triangle.cpp -o CMakeFiles/RasterViewer.dir/src/Triangle.cpp.s
+
+CMakeFiles/RasterViewer.dir/src/attributes.cpp.o: CMakeFiles/RasterViewer.dir/flags.make
+CMakeFiles/RasterViewer.dir/src/attributes.cpp.o: ../src/attributes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RasterViewer.dir/src/attributes.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RasterViewer.dir/src/attributes.cpp.o -c /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/attributes.cpp
+
+CMakeFiles/RasterViewer.dir/src/attributes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RasterViewer.dir/src/attributes.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/attributes.cpp > CMakeFiles/RasterViewer.dir/src/attributes.cpp.i
+
+CMakeFiles/RasterViewer.dir/src/attributes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RasterViewer.dir/src/attributes.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/attributes.cpp -o CMakeFiles/RasterViewer.dir/src/attributes.cpp.s
+
+CMakeFiles/RasterViewer.dir/src/mytutils.cpp.o: CMakeFiles/RasterViewer.dir/flags.make
+CMakeFiles/RasterViewer.dir/src/mytutils.cpp.o: ../src/mytutils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RasterViewer.dir/src/mytutils.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RasterViewer.dir/src/mytutils.cpp.o -c /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/mytutils.cpp
+
+CMakeFiles/RasterViewer.dir/src/mytutils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RasterViewer.dir/src/mytutils.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/mytutils.cpp > CMakeFiles/RasterViewer.dir/src/mytutils.cpp.i
+
+CMakeFiles/RasterViewer.dir/src/mytutils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RasterViewer.dir/src/mytutils.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/mytutils.cpp -o CMakeFiles/RasterViewer.dir/src/mytutils.cpp.s
+
 # Object files for target RasterViewer
 RasterViewer_OBJECTS = \
 "CMakeFiles/RasterViewer.dir/src/raster.cpp.o" \
-"CMakeFiles/RasterViewer.dir/src/RasterViewer.cpp.o"
+"CMakeFiles/RasterViewer.dir/src/RasterViewer.cpp.o" \
+"CMakeFiles/RasterViewer.dir/src/Triangle.cpp.o" \
+"CMakeFiles/RasterViewer.dir/src/attributes.cpp.o" \
+"CMakeFiles/RasterViewer.dir/src/mytutils.cpp.o"
 
 # External object files for target RasterViewer
 RasterViewer_EXTERNAL_OBJECTS =
 
 RasterViewer: CMakeFiles/RasterViewer.dir/src/raster.cpp.o
 RasterViewer: CMakeFiles/RasterViewer.dir/src/RasterViewer.cpp.o
+RasterViewer: CMakeFiles/RasterViewer.dir/src/Triangle.cpp.o
+RasterViewer: CMakeFiles/RasterViewer.dir/src/attributes.cpp.o
+RasterViewer: CMakeFiles/RasterViewer.dir/src/mytutils.cpp.o
 RasterViewer: CMakeFiles/RasterViewer.dir/build.make
 RasterViewer: libAssignment_6.a
 RasterViewer: SDL-build/libSDL2d.a
 RasterViewer: CMakeFiles/RasterViewer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable RasterViewer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable RasterViewer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RasterViewer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

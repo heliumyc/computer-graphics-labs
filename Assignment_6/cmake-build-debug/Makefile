@@ -308,6 +308,87 @@ src/SDLViewer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment_6.dir/build.make CMakeFiles/Assignment_6.dir/src/SDLViewer.cpp.s
 .PHONY : src/SDLViewer.cpp.s
 
+src/Triangle.o: src/Triangle.cpp.o
+
+.PHONY : src/Triangle.o
+
+# target to build an object file
+src/Triangle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RasterViewer.dir/build.make CMakeFiles/RasterViewer.dir/src/Triangle.cpp.o
+.PHONY : src/Triangle.cpp.o
+
+src/Triangle.i: src/Triangle.cpp.i
+
+.PHONY : src/Triangle.i
+
+# target to preprocess a source file
+src/Triangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RasterViewer.dir/build.make CMakeFiles/RasterViewer.dir/src/Triangle.cpp.i
+.PHONY : src/Triangle.cpp.i
+
+src/Triangle.s: src/Triangle.cpp.s
+
+.PHONY : src/Triangle.s
+
+# target to generate assembly for a file
+src/Triangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RasterViewer.dir/build.make CMakeFiles/RasterViewer.dir/src/Triangle.cpp.s
+.PHONY : src/Triangle.cpp.s
+
+src/attributes.o: src/attributes.cpp.o
+
+.PHONY : src/attributes.o
+
+# target to build an object file
+src/attributes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RasterViewer.dir/build.make CMakeFiles/RasterViewer.dir/src/attributes.cpp.o
+.PHONY : src/attributes.cpp.o
+
+src/attributes.i: src/attributes.cpp.i
+
+.PHONY : src/attributes.i
+
+# target to preprocess a source file
+src/attributes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RasterViewer.dir/build.make CMakeFiles/RasterViewer.dir/src/attributes.cpp.i
+.PHONY : src/attributes.cpp.i
+
+src/attributes.s: src/attributes.cpp.s
+
+.PHONY : src/attributes.s
+
+# target to generate assembly for a file
+src/attributes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RasterViewer.dir/build.make CMakeFiles/RasterViewer.dir/src/attributes.cpp.s
+.PHONY : src/attributes.cpp.s
+
+src/mytutils.o: src/mytutils.cpp.o
+
+.PHONY : src/mytutils.o
+
+# target to build an object file
+src/mytutils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RasterViewer.dir/build.make CMakeFiles/RasterViewer.dir/src/mytutils.cpp.o
+.PHONY : src/mytutils.cpp.o
+
+src/mytutils.i: src/mytutils.cpp.i
+
+.PHONY : src/mytutils.i
+
+# target to preprocess a source file
+src/mytutils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RasterViewer.dir/build.make CMakeFiles/RasterViewer.dir/src/mytutils.cpp.i
+.PHONY : src/mytutils.cpp.i
+
+src/mytutils.s: src/mytutils.cpp.s
+
+.PHONY : src/mytutils.s
+
+# target to generate assembly for a file
+src/mytutils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RasterViewer.dir/build.make CMakeFiles/RasterViewer.dir/src/mytutils.cpp.s
+.PHONY : src/mytutils.cpp.s
+
 src/raster.o: src/raster.cpp.o
 
 .PHONY : src/raster.o
@@ -359,6 +440,15 @@ help:
 	@echo "... src/SDLViewer.o"
 	@echo "... src/SDLViewer.i"
 	@echo "... src/SDLViewer.s"
+	@echo "... src/Triangle.o"
+	@echo "... src/Triangle.i"
+	@echo "... src/Triangle.s"
+	@echo "... src/attributes.o"
+	@echo "... src/attributes.i"
+	@echo "... src/attributes.s"
+	@echo "... src/mytutils.o"
+	@echo "... src/mytutils.i"
+	@echo "... src/mytutils.s"
 	@echo "... src/raster.o"
 	@echo "... src/raster.i"
 	@echo "... src/raster.s"

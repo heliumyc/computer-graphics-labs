@@ -74,6 +74,8 @@ bool SDLViewer::init(const std::string &window_name, const int w, const int h)
         window_surface = SDL_GetWindowSurface(window);
     }
 
+    width = w;
+    height = h;
     return true;
 }
 
@@ -176,4 +178,25 @@ SDLViewer::~SDLViewer()
 
     //Quit SDL subsystems
     SDL_Quit();
+}
+
+void SDLViewer::reset() {
+    insertionBuffer.clear();
+    clickCount = 0;
+    mode = ' ';
+    triangleIdxClicked = -1;
+    clearHighlight();
+    mouse_move = [](int x, int y, int xrel, int yrel){};
+    mouse_pressed = [&](int x, int y, bool is_pressed, int button, int clicks) {};
+    mouse_wheel = [&](int dx, int dy, bool is_direction_normal) {};
+    enableDrag = false;
+    colorVertexIdx = -1;
+    colorTriIdx = -1;
+    keyframes.clear();
+}
+
+void SDLViewer::clearHighlight() {
+    for (auto &x: triangles) {
+        x.highlight = false;
+    }
 }

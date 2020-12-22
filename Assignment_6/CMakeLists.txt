@@ -43,7 +43,7 @@ target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC "${THIRD_PARTY_DIR}/eig
 ################################################################################
 ################################################################################
 
-add_executable(RasterViewer src/raster.cpp src/RasterViewer.cpp)
+add_executable(RasterViewer src/raster.cpp src/RasterViewer.cpp src/Triangle.cpp src/Triangle.h src/attributes.cpp src/mytutils.h src/mytutils.cpp)
 target_link_libraries(RasterViewer PUBLIC ${PROJECT_NAME})
 
 # Folder where data files are stored (meshes & stuff)

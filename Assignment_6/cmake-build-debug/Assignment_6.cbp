@@ -1050,6 +1050,24 @@
 		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/SDLViewer.h">
 			<Option target="Assignment_6"/>
 		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/Triangle.cpp">
+			<Option target="RasterViewer"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/Triangle.h">
+			<Option target="RasterViewer"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/attributes.cpp">
+			<Option target="RasterViewer"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/attributes.h">
+			<Option target="RasterViewer"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/mytutils.cpp">
+			<Option target="RasterViewer"/>
+		</Unit>
+		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/mytutils.h">
+			<Option target="RasterViewer"/>
+		</Unit>
 		<Unit filename="/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/raster.cpp">
 			<Option target="RasterViewer"/>
 		</Unit>

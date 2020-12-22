@@ -1421,10 +1421,20 @@ functional
 -
 iostream
 -
+thread
+-
 raster.h
 /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/raster.h
 stb_image_write.h
 /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/stb_image_write.h
+Triangle.h
+/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/Triangle.h
+mytutils.h
+/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/mytutils.h
+chrono
+-
+thread
+-
 
 /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/SDLViewer.h
 Eigen/Core
@@ -1433,18 +1443,32 @@ SDL.h
 -
 SDL_timer.h
 -
+vector
+-
 functional
+-
+Triangle.h
+/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/Triangle.h
+
+/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/Triangle.h
+utility
+-
+attributes.h
+/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/attributes.h
+vector
 -
 
 /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/attributes.h
 Eigen/Core
 -
 
-/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/raster.cpp
-raster.h
-/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/raster.h
-iostream
+/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/mytutils.h
+Eigen/Core
 -
+attributes.h
+/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/attributes.h
+Triangle.h
+/Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/Triangle.h
 
 /Users/yucong/Documents/study/computer_graphics/labs/Assignment_6/src/raster.h
 Eigen/Core

@@ -8,7 +8,7 @@ class VertexAttributes
 	VertexAttributes(float x = 0, float y = 0, float z = 0, float w = 1)
 	{
 		position << x,y,z,w;
-		color << 1,1,1,1;
+		color << 1,0,0,1;
 	}
 
     // Interpolates the vertex attributes
@@ -27,8 +27,10 @@ class VertexAttributes
         return r;
     }
 
-	Eigen::Vector4f position;
-	Eigen::Vector4f color;
+    friend std::ostream &operator<<(std::ostream &os, const VertexAttributes &v);
+
+    Eigen::Vector4f position;
+	Eigen::Vector4f color{0,0,0,1};
 };
 
 class FragmentAttributes
@@ -56,4 +58,13 @@ class FrameBufferAttributes
 class UniformAttributes
 {
 	public:
+    int width = 0;
+    int height = 0;
+    int zoomIn = 0;
+    float moveLeft = 0;
+    float moveUp = 0;
+    Eigen::Matrix<float,4,4> viewM;
+    Eigen::Matrix<float,4,4> inverseM;
+
+    UniformAttributes();
 };

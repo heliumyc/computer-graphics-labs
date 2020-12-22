@@ -197,4 +197,6 @@ CMakeFiles/Assignment_6.dir/src/SDLViewer.cpp.o: ../ext/eigen/Eigen/src/plugins/
 CMakeFiles/Assignment_6.dir/src/SDLViewer.cpp.o: ../ext/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 CMakeFiles/Assignment_6.dir/src/SDLViewer.cpp.o: ../src/SDLViewer.cpp
 CMakeFiles/Assignment_6.dir/src/SDLViewer.cpp.o: ../src/SDLViewer.h
+CMakeFiles/Assignment_6.dir/src/SDLViewer.cpp.o: ../src/Triangle.h
+CMakeFiles/Assignment_6.dir/src/SDLViewer.cpp.o: ../src/attributes.h
 

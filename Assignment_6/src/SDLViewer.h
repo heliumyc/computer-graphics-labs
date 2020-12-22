@@ -4,8 +4,10 @@
 
 #include <SDL.h>
 #include <SDL_timer.h>
+#include <vector>
 
 #include <functional>
+#include "Triangle.h"
 
 /*
  * Modifiers:
@@ -65,8 +67,34 @@ public:
     std::function<void(SDLViewer &)> redraw;
 
     void update();
+    void reset();
+    void clearHighlight();
 
     bool redraw_next;
+
+    int width = 500;
+    int height = 500;
+    std::vector<Triangle> triangles;
+
+    // i, o, p
+    char mode = ' ';
+
+    // insertion
+    std::vector<VertexAttributes> insertionBuffer;
+    int clickCount = 0;
+
+    // translation
+    int triangleIdxClicked = -1;
+    bool enableDrag = false;
+
+    // color
+    int colorTriIdx;
+    int colorVertexIdx;
+
+    UniformAttributes uniform;
+
+    std::vector<std::vector<Triangle>> keyframes;
+    bool animate = false;
 
 private:
     // The window we'll be rendering to

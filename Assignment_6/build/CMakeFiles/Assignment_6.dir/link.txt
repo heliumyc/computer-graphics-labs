@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libAssignment_6.a CMakeFiles/Assignment_6.dir/src/SDLViewer.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libAssignment_6.a
